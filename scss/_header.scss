@@ -1,0 +1,74 @@
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  @include font-style;
+
+  &__burger {
+    display: none;
+
+    @include breakpoint(md) {
+      display: block;
+      background-color: #fff;
+    }
+  }
+  &__container {
+    margin-top: 87px !important;
+    min-height: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include breakpoint(lg) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include breakpoint(md) {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__logo {
+    @include logo;
+    @include breakpoint(lg) {
+      flex: 0 0 50%;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    @include breakpoint(md) {
+      margin-bottom: 0px;
+    }
+    img {
+      @include logo-img;
+    }
+  }
+  &__contact {
+    @include breakpoint(xl) {
+      font-size: 14px;
+    }
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+}
+.menu {
+  &__list {
+    display: flex;
+    gap: 60px;
+    padding: 0px 40px 0 5px;
+    @include breakpoint(xl) {
+      gap: 30px;
+      font-size: 14px;
+    }
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+  &__link {
+    &:hover,
+    :active {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.main-block {
+  position: relative;
+  &__body {
+    position: relative;
+    padding: 323px 0 420px 0;
+    z-index: 2;
+    @include breakpoint(sm) {
+      padding: 200px 0 180px 0;
+    }
+    h1 {
+      font-size: 120px;
+      line-height: 132px;
+      text-align: center;
+      letter-spacing: 0.09em;
+      margin-bottom: 80px;
+      @include breakpoint(lg) {
+        font-size: 90px;
+      }
+
+      @include breakpoint(md) {
+        margin-bottom: 30px;
+        font-size: 60px;
+        line-height: 100px;
+      }
+      @include breakpoint(sm) {
+        font-size: 40px;
+        line-height: 80px;
+      }
+    }
+  }
+  &__button {
+    @include button-center;
+  }
+  &__image {
+    @include image;
+
+    img {
+      background-color: $bcmain;
+    }
+  }
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px 0 10px 0;
+  @include breakpoint(sm) {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  &__social {
+    @include breakpoint(sm) {
+      display: flex;
+      gap: 30px;
+    }
+    &__item {
+      padding: 30px 0 10px 0;
+      img {
+        &:hover {
+          box-shadow: $shadow;
+        }
+      }
+    }
+  }
+  &__catalog {
+    display: flex;
+    text-transform: lowercase;
+    gap: 30px;
+    @include font-style;
+    &:hover {
+      box-shadow: $shadow;
+    }
+  }
+}

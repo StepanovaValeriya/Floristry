@@ -1,0 +1,43 @@
+.partners {
+  padding: 136px 10px 96px 10px;
+  @include breakpoint(lg) {
+    padding-top: 0;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1176px;
+    gap: 33px;
+    @include breakpoint(xl) {
+      justify-content: center;
+    }
+    @include breakpoint(lg) {
+      gap: 10px;
+    }
+  }
+  &__item {
+    &:hover {
+      box-shadow: $shadow;
+    }
+    @include breakpoint(xl) {
+      flex: 0 0 40%;
+    }
+    @include breakpoint(sm) {
+      flex: 0 0 100%;
+    }
+  }
+  &__item:nth-child(4),
+  &__item:nth-child(5) {
+    @include breakpoint(xl) {
+      width: 370px;
+    }
+  }
+  &__link {
+    img {
+      @include breakpoint(xl) {
+        width: 100%;
+      }
+    }
+  }
+}

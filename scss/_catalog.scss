@@ -1,0 +1,115 @@
+.catalog {
+  &__title {
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    p {
+      font-size: 220px;
+      line-height: 243px;
+      opacity: 0.03;
+      @include breakpoint(xxl) {
+        font-size: 180px;
+      }
+      @include breakpoint(xl) {
+        font-size: 130px;
+        line-height: 200px;
+      }
+      @include breakpoint(lg) {
+        font-size: 100px;
+      }
+      @include breakpoint(md) {
+        font-size: 70px;
+      }
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
+  }
+
+  // .catalog__body
+
+  &__body {
+    padding: 0 110px 0 110px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    align-items: flex-start;
+    margin: -140px auto 0;
+    max-height: 1130px;
+    @include breakpoint(xxl) {
+      padding: 0 10px 0 10px;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      max-height: 100%;
+    }
+    @include breakpoint(sm) {
+      margin: 0 auto 0;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border: $border;
+    padding: 10px 10px 20px 10px;
+    width: 350px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: $shadow;
+    }
+    @include breakpoint(xxl) {
+      height: 370px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    // if??
+    &:nth-of-type(4n + 1) {
+      order: 1;
+    }
+    &:nth-of-type(4n + 2) {
+      order: 2;
+    }
+    &:nth-of-type(4n + 3) {
+      order: 3;
+    }
+    &:nth-of-type(4n) {
+      order: 4;
+    }
+
+    &__break {
+      flex-basis: 100%;
+      width: 0;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+    &__title {
+      font-size: 16px;
+      line-height: 170%;
+      letter-spacing: 0.1em;
+      opacity: 0.9;
+      margin-bottom: 29px;
+      margin-top: 20px;
+    }
+    &__image {
+      order: -1;
+      display: block;
+
+      img {
+        position: relative !important;
+        @include breakpoint(xxl) {
+          height: 200px !important;
+        }
+      }
+    }
+    &__link {
+      font-size: 12px;
+      line-height: 13px;
+      letter-spacing: 0.15em;
+    }
+  }
+}

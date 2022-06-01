@@ -1,0 +1,42 @@
+.footer {
+  padding: 96px 0 68px 0;
+  &__body {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  &__list {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding: 0 25px 0 25px;
+    @include breakpoint(md) {
+      gap: 20px;
+    }
+    @include breakpoint(md) {
+      flex-wrap: wrap;
+    }
+  }
+  &__link {
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    img {
+      &:hover {
+        box-shadow: $shadow;
+      }
+    }
+  }
+}

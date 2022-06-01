@@ -1,0 +1,60 @@
+$bcmain: #3b181e;
+$white: #fff;
+$certificateColor: #281014;
+$border: 1px solid rgba(255, 255, 255, 0.2);
+$btnHover: #1f1214;
+$shadow: 0px 4px 50px rgba(0, 0, 0, 0.685);
+
+@mixin breakpoint($point) {
+  @if $point == xxl {
+    @media (max-width: 1680px) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (max-width: 1270px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point == xs {
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
+}
+
+@mixin logo {
+  display: flex;
+  flex-direction: column;
+}
+@mixin logo-img {
+  order: -1;
+}
+@mixin button-center {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+@mixin image {
+  position: absolute !important;
+  width: 100%;
+  height: 90%;
+  top: 0;
+  left: 0;
+}
+
+@mixin font-style {
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+}
