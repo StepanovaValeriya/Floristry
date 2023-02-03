@@ -1,7 +1,14 @@
 # Floristry
 
-Responsive landing page for a flower shop. Training project for learning scss, BEM, flexbox. The project doesn't use JavaScript.
+Тренировочный проект лэндинга для цветочного магазина. Адаптивная верстка.
 
-## Getting Started
+# Используемы технологии
+- SCSS
+- HTML
+- БЭМ
+- Flexbox
 
-To run the project сlone it to your local machine and open index.html file in browser
+
+## Запуск
+
+Для просмотра проекта, откройте файл  index.html  в браузере.
